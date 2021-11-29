@@ -1,0 +1,41 @@
+//Add Option Error
+.add-option-error{
+    color: $off-white;
+    font-style: italic;
+    margin: $medium-size 0 0 0;
+    padding: 0 $medium-size;
+}
+
+//Add Option
+.add-option{
+    display: flex;
+    flex-direction: column; // stacks things vertically good for mobile devices
+    padding: $medium-size;
+
+
+}
+
+//Input of Add Option
+.add-option__input{
+    background: $dark-blue;
+    border: none; //to remove top, right, left borders
+    color: $off-white;
+    border-bottom: 0.3rem solid darken($dark-blue, 10%);
+    flex-grow: 1; //to take all available space
+    margin: 0 0 $small-size 0;
+    padding: $small-size;
+}
+
+//Only for devices wider than a phone change these styles:
+@media (min-width: $desktop-breakpoint){
+    .add-option{
+        flex-direction: row;
+
+    }
+
+    .add-option__input{
+        margin: 0 $small-size 0 0;
+    }
+}
+// this says that anything with a width above $desktop-breakpoint(45rem) use these styles. So it will show up for bigger devices and not smaller ones like phones.
+// you can update selectors if you meet this condition

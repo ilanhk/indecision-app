@@ -1,0 +1,34 @@
+.header{
+    background: $off-black;
+    color: white;
+    margin-bottom: $medium-size;
+    padding: $medium-size 0;
+
+
+}//scss allows nested selectors but can be complicated
+
+
+//BEM - block element modifier
+.header__title{
+    font-size: $large-size;
+    margin: 0;
+}
+//BEM name convention instead of puting h1 you give h1 a class name
+
+.header__subtitle{
+    color: $off-white;
+    font-size: $medium-size;
+    font-weight: 500; //thickness of the font
+    margin: 0;
+
+
+}
+
+//Only for devices wider than a phone change these styles:
+@media (min-width: $desktop-breakpoint){
+    .header{
+        margin-bottom: $xl-size;
+
+    }
+
+}

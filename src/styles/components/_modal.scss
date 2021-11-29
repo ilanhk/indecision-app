@@ -1,0 +1,43 @@
+
+.ReactModalPortal > div{
+    opacity: 0;
+
+}
+// .ReactModalPortal > div means i want to target divs that are direct decendents of this class
+
+.ReactModalPortal .ReactModal__Overlay{
+    align-items: center; 
+    display: flex; //to enable flexbox
+    justify-content: center;
+
+    transition: opacity 200ms ease-in-out; // changes the opacity in a certain time and ease-in-out creates a real motion effect. Transitioning in.
+}
+// in this class: .ReactModalPortal we want to look for: .ReactModal__Overlay
+
+.ReactModalPortal .ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close{
+    opacity: 0;
+}
+
+.modal{
+    background: $light-blue;
+    color: white;
+    max-width: 30rem; //incase have long option it will not expand the modal but be wrapped in it.
+    outline: none; //remove blue border
+    padding: $large-size;
+    text-align: center;
+}
+
+.modal__title{
+    margin: 0 0 $medium-size 0;
+}
+
+.modal__body{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0 0 $large-size 0;
+    word-break: break-all; //if there is a very very long word it would be broken up to multiple lines
+}
